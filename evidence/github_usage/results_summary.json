@@ -1,0 +1,29 @@
+{
+  "captured_at_utc": "2026-09-02",
+  "source": "GitHub REST Code Search via gh api",
+  "forks_excluded": true,
+  "results": [
+    {
+      "extension": ".mal",
+      "query": "extension:mal NOT is:fork",
+      "total_count": 6096,
+      "incomplete_results": false,
+      "malbolge_keyword_count": 27,
+      "assessment": "contaminated_by_unrelated_formats"
+    },
+    {
+      "extension": ".malbolge",
+      "query": "extension:malbolge NOT is:fork",
+      "total_count": 42,
+      "incomplete_results": false,
+      "malbolge_keyword_count": 3,
+      "assessment": "below_linguist_common_extension_threshold"
+    }
+  ],
+  "linguist_usage_gate": "NOT_DEMONSTRATED",
+  "notes": [
+    "Current Linguist policy requires 2000 indexed files in the last year for a common extension.",
+    "The API queries do not independently establish the last-year filter.",
+    "GitHub API rate limiting prevented additional repository metadata checks."
+  ]
+}

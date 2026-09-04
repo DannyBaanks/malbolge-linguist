@@ -1,0 +1,3 @@
+﻿; arith.mal - Scheme arithmetic library (false positive for .mal)
+; This is not Malbolge
+(define (add a b) (+ a b))

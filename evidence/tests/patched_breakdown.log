@@ -1,0 +1,7 @@
+/workspace/upstream/bin/github-linguist:1: warning: shebang line ending with \r may cause problems
+100.00% 254        Malbolge
+
+Malbolge:
+  truth_machine.malbolge
+
+EXIT:0

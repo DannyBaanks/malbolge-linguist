@@ -1,0 +1,6 @@
+language:Malbolge
+name:truth_machine.malbolge
+ext:.malbolge
+mime:text/plain
+size:254
+EXIT:0

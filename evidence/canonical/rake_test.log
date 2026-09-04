@@ -1,0 +1,91 @@
+/usr/local/bin/ruby -I. ../../../../ext/linguist/extconf.rb
+mkdir -p tmp/x86_64-linux-musl/linguist/3.4.10
+cd tmp/x86_64-linux-musl/linguist/3.4.10
+creating Makefile
+/usr/bin/gmake
+cd -
+cd tmp/x86_64-linux-musl/linguist/3.4.10
+compiling ../../../../ext/linguist/lex.linguist_yy.c
+compiling ../../../../ext/linguist/linguist.c
+linking shared-object linguist/linguist.so
+cd -
+mkdir -p tmp/x86_64-linux-musl/stage/lib/linguist
+cp LICENSE tmp/x86_64-linux-musl/stage/LICENSE
+mkdir -p tmp/x86_64-linux-musl/stage/bin
+cp bin/git-linguist tmp/x86_64-linux-musl/stage/bin/git-linguist
+cp bin/github-linguist tmp/x86_64-linux-musl/stage/bin/github-linguist
+mkdir -p tmp/x86_64-linux-musl/stage/ext/linguist
+cp ext/linguist/extconf.rb tmp/x86_64-linux-musl/stage/ext/linguist/extconf.rb
+cp ext/linguist/lex.linguist_yy.c tmp/x86_64-linux-musl/stage/ext/linguist/lex.linguist_yy.c
+cp ext/linguist/lex.linguist_yy.h tmp/x86_64-linux-musl/stage/ext/linguist/lex.linguist_yy.h
+cp ext/linguist/linguist.c tmp/x86_64-linux-musl/stage/ext/linguist/linguist.c
+cp ext/linguist/linguist.h tmp/x86_64-linux-musl/stage/ext/linguist/linguist.h
+cp ext/linguist/tokenizer.l tmp/x86_64-linux-musl/stage/ext/linguist/tokenizer.l
+cp lib/linguist.rb tmp/x86_64-linux-musl/stage/lib/linguist.rb
+cp lib/linguist/VERSION tmp/x86_64-linux-musl/stage/lib/linguist/VERSION
+cp lib/linguist/blob.rb tmp/x86_64-linux-musl/stage/lib/linguist/blob.rb
+cp lib/linguist/blob_helper.rb tmp/x86_64-linux-musl/stage/lib/linguist/blob_helper.rb
+cp lib/linguist/classifier.rb tmp/x86_64-linux-musl/stage/lib/linguist/classifier.rb
+cp lib/linguist/documentation.yml tmp/x86_64-linux-musl/stage/lib/linguist/documentation.yml
+cp lib/linguist/file_blob.rb tmp/x86_64-linux-musl/stage/lib/linguist/file_blob.rb
+cp lib/linguist/generated.rb tmp/x86_64-linux-musl/stage/lib/linguist/generated.rb
+cp lib/linguist/generic.yml tmp/x86_64-linux-musl/stage/lib/linguist/generic.yml
+cp lib/linguist/grammars.rb tmp/x86_64-linux-musl/stage/lib/linguist/grammars.rb
+cp lib/linguist/heuristics.rb tmp/x86_64-linux-musl/stage/lib/linguist/heuristics.rb
+cp lib/linguist/heuristics.yml tmp/x86_64-linux-musl/stage/lib/linguist/heuristics.yml
+cp lib/linguist/instrumenter.rb tmp/x86_64-linux-musl/stage/lib/linguist/instrumenter.rb
+cp lib/linguist/language.rb tmp/x86_64-linux-musl/stage/lib/linguist/language.rb
+cp lib/linguist/languages.yml tmp/x86_64-linux-musl/stage/lib/linguist/languages.yml
+cp lib/linguist/lazy_blob.rb tmp/x86_64-linux-musl/stage/lib/linguist/lazy_blob.rb
+cp lib/linguist/popular.yml tmp/x86_64-linux-musl/stage/lib/linguist/popular.yml
+cp lib/linguist/repository.rb tmp/x86_64-linux-musl/stage/lib/linguist/repository.rb
+cp lib/linguist/samples.rb tmp/x86_64-linux-musl/stage/lib/linguist/samples.rb
+cp lib/linguist/sha256.rb tmp/x86_64-linux-musl/stage/lib/linguist/sha256.rb
+cp lib/linguist/shebang.rb tmp/x86_64-linux-musl/stage/lib/linguist/shebang.rb
+mkdir -p tmp/x86_64-linux-musl/stage/lib/linguist/source
+cp lib/linguist/source/diff.rb tmp/x86_64-linux-musl/stage/lib/linguist/source/diff.rb
+cp lib/linguist/source/repository.rb tmp/x86_64-linux-musl/stage/lib/linguist/source/repository.rb
+cp lib/linguist/source/rugged.rb tmp/x86_64-linux-musl/stage/lib/linguist/source/rugged.rb
+mkdir -p tmp/x86_64-linux-musl/stage/lib/linguist/strategy
+cp lib/linguist/strategy/extension.rb tmp/x86_64-linux-musl/stage/lib/linguist/strategy/extension.rb
+cp lib/linguist/strategy/filename.rb tmp/x86_64-linux-musl/stage/lib/linguist/strategy/filename.rb
+cp lib/linguist/strategy/manpage.rb tmp/x86_64-linux-musl/stage/lib/linguist/strategy/manpage.rb
+cp lib/linguist/strategy/modeline.rb tmp/x86_64-linux-musl/stage/lib/linguist/strategy/modeline.rb
+cp lib/linguist/strategy/xml.rb tmp/x86_64-linux-musl/stage/lib/linguist/strategy/xml.rb
+cp lib/linguist/tokenizer.rb tmp/x86_64-linux-musl/stage/lib/linguist/tokenizer.rb
+cp lib/linguist/vendor.yml tmp/x86_64-linux-musl/stage/lib/linguist/vendor.yml
+cp lib/linguist/version.rb tmp/x86_64-linux-musl/stage/lib/linguist/version.rb
+install -c tmp/x86_64-linux-musl/linguist/3.4.10/linguist.so lib/linguist/linguist.so
+mkdir -p /workspace/baseline/lib/linguist
+cp tmp/x86_64-linux-musl/linguist/3.4.10/linguist.so tmp/x86_64-linux-musl/stage/lib/linguist/linguist.so
+Run options: --seed 43425
+
+# Running:
+
+..............................................................................................................................................................................................................E..................F...F............................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+
+Finished in 26.886176s, 75.6523 runs/s, 1463.6890 assertions/s.
+
+  1) Error:
+TestLanguage#test_codemirror_mode_and_mime_defined_by_meta_mapping:
+Errno::ENOENT: No such file or directory @ rb_sysopen - /workspace/baseline/vendor/CodeMirror/mode/meta.js
+    test/test_language.rb:452:in 'IO.read'
+    test/test_language.rb:452:in 'TestLanguage#test_codemirror_mode_and_mime_defined_by_meta_mapping'
+
+  2) Failure:
+TestLanguage#test_codemirror_mime_declared_in_mode_file [test/test_language.rb:463]:
+/workspace/baseline/vendor/CodeMirror/mode/clike/clike.js does not exist
+
+  3) Failure:
+TestLanguage#test_valid_codemirror_mode [test/test_language.rb:446]:
+clike isn't a valid CodeMirror mode
+
+2034 runs, 39353 assertions, 2 failures, 1 errors, 0 skips
+rake aborted!
+Command failed with status (1)
+/bundle/ruby/3.4.0/gems/rake-13.4.2/exe/rake:27:in '<top (required)>'
+/usr/local/bin/bundle:25:in 'Kernel#load'
+/usr/local/bin/bundle:25:in '<main>'
+Tasks: TOP => test
+(See full trace by running task with --trace)
+RAKE_EXIT:1n

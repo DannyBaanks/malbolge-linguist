@@ -1,0 +1,51 @@
+{
+  "generated_at": "2026-09-02T13:05:00Z",
+  "os": "win32",
+  "canonical_env": "Docker volumes + DIND daemon (not host bundle)",
+  "container": {
+    "runner_image": "malbolge-linguist-addgrammar",
+    "work_volume": "malbolge-canonical-work",
+    "bundle_volume": "malbolge-canonical-bundle",
+    "dind": "malbolge-canonical-dind (docker:27-dind, tcp://malbolge-canonical-dind:2375, DOCKER_TLS_CERTDIR='')",
+    "note": "script/add-grammar runs with USER=root (its -u \"$(id -u \"$USER\")\" needs a resolvable user)"
+  },
+  "environment": {
+    "ruby": "3.4.10 (2026-06-30 revision 2b0b7728dc) [x86_64-linux-musl]",
+    "bundler": "2.6.9",
+    "docker_server": "27.5.1 (Docker Engine - Community)",
+    "docker_client": "29.5.3",
+    "git": "2.54.0",
+    "source": "evidence/canonical/environment.log"
+  },
+  "upstream": {
+    "repo": "https://github.com/github-linguist/linguist",
+    "commit": "d5214e1612c858ba14bf98edeca57e1683276f1d",
+    "branch": "main"
+  },
+  "grammar": {
+    "repo": "https://github.com/DannyBaanks/malbolge-syntax",
+    "commit": "225f5acbb846dbc7d23b5c497f4487dfefb161ac",
+    "license": "MIT",
+    "layout": "syntaxes/malbolge.tmLanguage.json",
+    "integration": "canonical script/add-grammar https://github.com/DannyBaanks/malbolge-syntax (exit 0)"
+  },
+  "canonical_pipeline": [
+    "fresh clone d5214e16 -> branch malbolge-canonical (/workspace/patched)",
+    "bundle check (satisfied via /bundle volume)",
+    "script/add-grammar https://github.com/DannyBaanks/malbolge-syntax  (exit 0)",
+    "script/update-ids  (exit 0)",
+    "script/list-grammars  (exit 0, regenerates vendor/README.md)",
+    "bundle exec rake samples  (exit 0)",
+    "bundle exec rake test  (2036 runs / 39369 assertions / 2 failures / 1 error, all CodeMirror)",
+    "detection probes (FileBlob, Language, breakdown)  (exit 0)",
+    "git commit 1af6aef9 -> git format-patch d5214e16..1af6aef9",
+    "fresh-clone git apply verify  (exit 0)"
+  ],
+  "results": {
+    "baseline": "2034 runs, 39353 assertions, 2 failures, 1 error (CodeMirror-only)",
+    "patched": "2036 runs, 39369 assertions, 2 failures, 1 error (CodeMirror-only, 0 new failures)",
+    "patch": "evidence/patches/malbolge.patch, d5214e16..1af6aef9, SHA DFDA0517F53F95209DEEC4D43A6E287EBDC20C846D14034BFEDFAB57BE4620E8",
+    "detection": "FileBlob -> Malbolge; Language[Malbolge] ext=[.malbolge] #1D1A2F id=1006177966 tm_scope=source.malbolge; github-linguist --breakdown -> 100.00% Malbolge"
+  },
+  "notes": "Canonical evidence in evidence/canonical/. Legacy non-canonical evidence/tests/*.log and TOOLCHAIN_LOCK host bundle entries are preserved for history only; do not cite as current. Patch commit lives in the Docker volume (not pushed)."
+}

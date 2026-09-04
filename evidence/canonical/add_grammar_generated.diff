@@ -1,0 +1,34 @@
+diff --git a/.gitmodules b/.gitmodules
+index c4c8aaa2..4d8ec89b 100644
+--- a/.gitmodules
++++ b/.gitmodules
+@@ -977,6 +977,9 @@
+ [submodule "vendor/grammars/mako-tmbundle"]
+ 	path = vendor/grammars/mako-tmbundle
+ 	url = https://github.com/marconi/mako-tmbundle
++[submodule "vendor/grammars/malbolge-syntax"]
++	path = vendor/grammars/malbolge-syntax
++	url = https://github.com/DannyBaanks/malbolge-syntax.git
+ [submodule "vendor/grammars/markdown-tm-language"]
+ 	path = vendor/grammars/markdown-tm-language
+ 	url = https://github.com/wooorm/markdown-tm-language.git
+@@ -1662,6 +1665,3 @@
+ [submodule "vendor/grammars/zephir-sublime"]
+ 	path = vendor/grammars/zephir-sublime
+ 	url = https://github.com/phalcon/zephir-sublime
+-[submodule "vendor/grammars/malbolge-syntax"]
+-	path = vendor/grammars/malbolge-syntax
+-	url = https://github.com/DannyBaanks/malbolge-syntax.git
+diff --git a/grammars.yml b/grammars.yml
+index 3400fcec..6fbe2060 100644
+--- a/grammars.yml
++++ b/grammars.yml
+@@ -928,6 +928,8 @@ vendor/grammars/make.tmbundle:
+ - source.makefile
+ vendor/grammars/mako-tmbundle:
+ - text.html.mako
++vendor/grammars/malbolge-syntax:
++- source.malbolge
+ vendor/grammars/markdown-tm-language:
+ - source.mdx
+ - text.md

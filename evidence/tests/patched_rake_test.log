@@ -1,0 +1,193 @@
+cp bin/git-linguist tmp/x86_64-linux-musl/stage/bin/git-linguist
+cp bin/github-linguist tmp/x86_64-linux-musl/stage/bin/github-linguist
+install -c tmp/x86_64-linux-musl/linguist/3.4.10/linguist.so lib/linguist/linguist.so
+cp tmp/x86_64-linux-musl/linguist/3.4.10/linguist.so tmp/x86_64-linux-musl/stage/lib/linguist/linguist.so
+Run options: --seed 27858
+
+# Running:
+
+............................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................Samples database is out of date. Run `bundle exec rake samples`.
+..........................................................................F..F....F....F..............................F..F...............E........................................F.F..F..........F...........................................................................FF....F.....................F.F........F........F.........................F..................................F........F...................
+
+Finished in 297.834341s, 6.8360 runs/s, 90.7149 assertions/s.
+
+  1) Failure:
+TestBlob#test_language [test/test_blob.rb:294]:
+casm.cairo.
+Expected: "Cairo Zero"
+  Actual: "Cairo"
+
+  2) Failure:
+TestBlob#test_generated [test/test_blob.rb:190]:
+Expected false to be truthy.
+
+  3) Failure:
+TestBlob#test_data [test/test_blob.rb:41]:
+--- expected
++++ actual
+@@ -1,3 +1,5 @@
+-"module Foo
+-end
++# encoding: ASCII-8BIT
++#    valid: true
++"module Foo\r
++end\r
+ "
+
+
+  4) Failure:
+TestBlob#test_size [test/test_blob.rb:51]:
+Expected: 15
+  Actual: 17
+
+  5) Failure:
+TestLanguage#test_codemirror_mime_declared_in_mode_file [test/test_language.rb:463]:
+/workspace/upstream/vendor/CodeMirror/mode/clike/clike.js does not exist
+
+  6) Failure:
+TestLanguage#test_valid_codemirror_mode [test/test_language.rb:446]:
+clike isn't a valid CodeMirror mode
+
+  7) Error:
+TestLanguage#test_codemirror_mode_and_mime_defined_by_meta_mapping:
+Errno::ENOENT: No such file or directory @ rb_sysopen - /workspace/upstream/vendor/CodeMirror/mode/meta.js
+    test/test_language.rb:452:in 'IO.read'
+    test/test_language.rb:452:in 'TestLanguage#test_codemirror_mode_and_mime_defined_by_meta_mapping'
+
+  8) Failure:
+TestFileBlob#test_data [test/test_file_blob.rb:61]:
+--- expected
++++ actual
+@@ -1,3 +1,5 @@
+-"module Foo
+-end
++# encoding: ASCII-8BIT
++#    valid: true
++"module Foo\r
++end\r
+ "
+
+
+  9) Failure:
+TestFileBlob#test_generated [test/test_file_blob.rb:217]:
+Expected false to be truthy.
+
+ 10) Failure:
+TestFileBlob#test_size [test/test_file_blob.rb:71]:
+Expected: 15
+  Actual: 17
+
+ 11) Failure:
+TestFileBlob#test_language [test/test_file_blob.rb:687]:
+casm.cairo.
+Expected: "Cairo Zero"
+  Actual: "Cairo"
+
+ 12) Failure:
+TestHeuristics#test_cairo_by_heuristics [test/test_heuristics.rb:351]:
+Failed for /workspace/upstream/samples/Cairo Zero/casm.cairo.
+--- expected
++++ actual
+@@ -1 +1 @@
+-[#<Linguist::Language name=Cairo Zero>]
++[#<Linguist::Language name=Cairo>]
+
+
+ 13) Failure:
+TestHeuristics#test_gml_by_heuristics [test/test_heuristics.rb:540]:
+Failed for /workspace/upstream/samples/Graph Modeling Language/sample.gml.
+--- expected
++++ actual
+@@ -1 +1 @@
+-[#<Linguist::Language name=Graph Modeling Language>]
++[#<Linguist::Language name=Game Maker Language>]
+
+
+ 14) Failure:
+TestHeuristics#test_k_by_heuristics [test/test_heuristics.rb:652]:
+Failed for /workspace/upstream/samples/KFramework/sample1.k.
+--- expected
++++ actual
+@@ -1 +1 @@
+-[#<Linguist::Language name=KFramework>]
++[]
+
+
+ 15) Failure:
+TestHeuristics#test_pro_by_heuristics [test/test_heuristics.rb:943]:
+Failed for /workspace/upstream/samples/Proguard/proguard-rules.pro.
+--- expected
++++ actual
+@@ -1 +1 @@
+-[#<Linguist::Language name=Proguard>]
++[]
+
+
+ 16) Failure:
+TestHeuristics#test_st_by_heuristics [test/test_heuristics.rb:1114]:
+Failed for /workspace/upstream/samples/Smalltalk/Dinner.st.
+--- expected
++++ actual
+@@ -1 +1 @@
+-[#<Linguist::Language name=Smalltalk>]
++[#<Linguist::Language name=StringTemplate>]
+
+
+ 17) Failure:
+TestHeuristics#test_m_by_heuristics [test/test_heuristics.rb:712]:
+Failed for /workspace/upstream/samples/Wolfram Language/HeyexImport.m.
+--- expected
++++ actual
+@@ -1 +1 @@
+-[#<Linguist::Language name=Wolfram Language>]
++[]
+
+
+ 18) Failure:
+TestHeuristics#test_resource_by_heuristics [test/test_heuristics.rb:1002]:
+Failed for /workspace/upstream/samples/RobotFramework/keywords.resource.
+--- expected
++++ actual
+@@ -1 +1 @@
+-[#<Linguist::Language name=RobotFramework>]
++[]
+
+
+ 19) Failure:
+TestHeuristics#test_symlink_empty [test/test_heuristics.rb:35]:
+--- expected
++++ actual
+@@ -1 +1 @@
+-[]
++[#<Linguist::Language name=Markdown>]
+
+
+ 20) Failure:
+TestHeuristics#test_app_by_heuristics [test/test_heuristics.rb:253]:
+Failed for /workspace/upstream/test/fixtures/Generic/app/Erlang/regular.app.
+--- expected
++++ actual
+@@ -1 +1 @@
+-[#<Linguist::Language name=Erlang>]
++[]
+
+
+ 21) Failure:
+TestHeuristics#test_srt_by_heuristics [test/test_heuristics.rb:1102]:
+Failed for /workspace/upstream/samples/SubRip Text/Adding.NCL.Language.S01E01.1080p.BluRay.x264.srt.
+--- expected
++++ actual
+@@ -1 +1 @@
+-[#<Linguist::Language name=SubRip Text>]
++[]
+
+
+2036 runs, 27018 assertions, 20 failures, 1 errors, 0 skips
+rake aborted!
+Command failed with status (1)
+/usr/local/bundle/gems/rake-13.4.2/exe/rake:27:in '<top (required)>'
+/usr/local/bin/bundle:25:in 'Kernel#load'
+/usr/local/bin/bundle:25:in '<main>'
+Tasks: TOP => test
+(See full trace by running task with --trace)
+RAKE_EXIT:1

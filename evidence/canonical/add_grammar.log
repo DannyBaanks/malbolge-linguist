@@ -1,0 +1,16 @@
+Checking Docker is installed and running
+Registering new submodule: https://github.com/DannyBaanks/malbolge-syntax.git
+Cloning into '/workspace/patched/vendor/grammars/malbolge-syntax'...
+latest: Pulling from linguist/grammar-compiler
+Digest: sha256:7944f37fab336087fbe1c3e99f926e759e4ccf92fe9a164adf90cd68cd11d685
+Status: Image is up to date for linguist/grammar-compiler:latest
+docker.io/linguist/grammar-compiler:latest
+OK! added grammar source 'vendor/grammars/malbolge-syntax'
+	new scope: source.malbolge
+Caching grammar license
+Caching dependency records for patched
+  git_submodule
+    Caching malbolge-syntax (225f5acbb846dbc7d23b5c497f4487dfefb161ac)
+  * 1 git_submodule dependencies
+Updating grammar documentation in vendor/README.md
+ADD_GRAMMAR_EXIT:0

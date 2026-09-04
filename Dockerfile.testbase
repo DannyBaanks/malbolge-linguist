@@ -1,0 +1,2 @@
+FROM ruby:3.4-alpine
+RUN apk add --no-cache build-base cmake git icu-dev zlib-dev openssl-dev linux-headers

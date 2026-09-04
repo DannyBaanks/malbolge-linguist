@@ -1,0 +1,4 @@
+cp lib/linguist/samples_data.rb tmp/x86_64-linux-musl/stage/lib/linguist/samples_data.rb
+install -c tmp/x86_64-linux-musl/linguist/3.4.10/linguist.so lib/linguist/linguist.so
+cp tmp/x86_64-linux-musl/linguist/3.4.10/linguist.so tmp/x86_64-linux-musl/stage/lib/linguist/linguist.so
+SAMPLES_EXIT:0

@@ -1,0 +1,6 @@
+#<Linguist::Language name=Malbolge>
+ext:[".malbolge"]
+color:#1D1A2F
+id:1006177966
+tm_scope:source.malbolge
+EXIT:0

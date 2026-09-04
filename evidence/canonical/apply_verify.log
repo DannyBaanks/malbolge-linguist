@@ -1,0 +1,27 @@
+=== base HEAD ===
+d5214e1612c858ba14bf98edeca57e1683276f1d
+=== applying patch ===
+CHECK_EXIT=0
+APPLY_EXIT=0
+=== status after apply ===
+ M .gitmodules
+ M grammars.yml
+ M lib/linguist/languages.yml
+ M vendor/README.md
+?? samples/Malbolge/
+?? vendor/licenses/git_submodule/malbolge-syntax.dep.yml
+=== verify Malbolge present in languages.yml ===
+Malbolge:
+  type: programming
+  color: "#1D1A2F"
+  extensions:
+  - ".malbolge"
+  tm_scope: source.malbolge
+  ace_mode: text
+  language_id: 1006177966
+Markdown:
+=== verify sample present ===
+total 28
+drwxr-xr-x    2 root     root          4096 Sep  2 13:01 .
+drwxr-xr-x  768 root     root         20480 Sep  2 13:01 ..
+-rw-r--r--    1 root     root           254 Sep  2 13:01 truth_machine.malbolge

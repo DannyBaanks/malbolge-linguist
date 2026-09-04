@@ -1,0 +1,2 @@
+FROM malbolge-linguist-base
+RUN apk add --no-cache docker-cli

@@ -1,0 +1,157 @@
+{
+  "by_confidence": {
+    "demonstrated": 2,
+    "inferred": 1
+  },
+  "by_extension": {
+    ".mal": 2,
+    ".malbolge": 1
+  },
+  "by_language_assessment": {
+    "malbolge": {
+      "by_confidence": {
+        "demonstrated": 2,
+        "inferred": 1
+      },
+      "files": 3
+    }
+  },
+  "candidate_files": 2,
+  "inconclusive_files": 1,
+  "notes": {
+    "MALBOLGE_LINGUIST_SUPPORT": false,
+    "MALBOLGE_PROJECTMAP_SUPPORT": true,
+    "MAL_EXTENSION_ALONE_PROVES_MALBOLGE": false,
+    "MAL_EXTENSION_UNAMBIGUOUS": false,
+    "census_is_evidence_collection_not_linguist_proof": true,
+    "linguist_supports_malbolge": false,
+    "projectmap_recognizes_malbolge": true
+  },
+  "per_file": [
+    {
+      "candidates": [
+        "malbolge"
+      ],
+      "confidence": "inferred",
+      "confidence_detail": "inferred",
+      "evidence": [
+        {
+          "claim": "ambiguous extension .mal -> malbolge (candidate, not verified)",
+          "confidence": "inferred",
+          "source": "extension:ambiguous"
+        },
+        {
+          "claim": "sin rol detectable",
+          "confidence": "unknown",
+          "source": "heuristic"
+        },
+        {
+          "claim": "archivo en raíz -> misc",
+          "confidence": "inferred",
+          "source": "heuristic:root"
+        },
+        {
+          "claim": "external validator gost: rejected malbolge for arith.mal sha256:77ec57ff1674... details:['reason', 'validator']",
+          "confidence": "unknown",
+          "source": "malbolge-validator"
+        }
+      ],
+      "evidence_sources": [
+        "extension:ambiguous",
+        "heuristic",
+        "heuristic:root",
+        "malbolge-validator"
+      ],
+      "extension": ".mal",
+      "language": "malbolge",
+      "path": "arith.mal",
+      "reason": "ambiguous extension .mal -> malbolge (candidate, not verified); sin rol detectable; archivo en raíz -> misc; external validator gost: rejected malbolge for arith.mal sha256:77ec57ff1674... details:['reason', 'validator']",
+      "sha256": "77ec57ff16747f9cbc9fd925f5b78e746760e7f2af944dbede0fec601b775d9d"
+    },
+    {
+      "candidates": [
+        "malbolge"
+      ],
+      "confidence": "demonstrated",
+      "confidence_detail": "inferred",
+      "evidence": [
+        {
+          "claim": "ambiguous extension .mal -> malbolge (candidate, not verified)",
+          "confidence": "inferred",
+          "source": "extension:ambiguous"
+        },
+        {
+          "claim": "sin rol detectable",
+          "confidence": "unknown",
+          "source": "heuristic"
+        },
+        {
+          "claim": "archivo en raíz -> misc",
+          "confidence": "inferred",
+          "source": "heuristic:root"
+        },
+        {
+          "claim": "external validator gost+oracle: demonstrated malbolge for truth.mal sha256:7062713e96da... details:['execution', 'validators', 'steps']",
+          "confidence": "demonstrated",
+          "source": "malbolge-validator"
+        }
+      ],
+      "evidence_sources": [
+        "extension:ambiguous",
+        "heuristic",
+        "heuristic:root",
+        "malbolge-validator"
+      ],
+      "extension": ".mal",
+      "language": "malbolge",
+      "path": "truth.mal",
+      "reason": "ambiguous extension .mal -> malbolge (candidate, not verified); sin rol detectable; archivo en raíz -> misc; external validator gost+oracle: demonstrated malbolge for truth.mal sha256:7062713e96da... details:['execution', 'validators', 'steps']",
+      "sha256": "7062713e96dae33f5672fc4dcd654d5657e3c0ab44fd03bd93ebdd3ec43feb82"
+    },
+    {
+      "candidates": [
+        "malbolge"
+      ],
+      "confidence": "demonstrated",
+      "confidence_detail": "verified",
+      "evidence": [
+        {
+          "claim": "extension .malbolge -> malbolge",
+          "confidence": "verified",
+          "source": "extension"
+        },
+        {
+          "claim": "sin rol detectable",
+          "confidence": "unknown",
+          "source": "heuristic"
+        },
+        {
+          "claim": "archivo en raíz -> misc",
+          "confidence": "inferred",
+          "source": "heuristic:root"
+        },
+        {
+          "claim": "external validator projectmap-detector: demonstrated malbolge for truth.malbolge sha256:7062713e96da... details:['extension', 'confidence']",
+          "confidence": "demonstrated",
+          "source": "extension"
+        }
+      ],
+      "evidence_sources": [
+        "extension",
+        "heuristic",
+        "heuristic:root",
+        "extension"
+      ],
+      "extension": ".malbolge",
+      "language": "malbolge",
+      "path": "truth.malbolge",
+      "reason": "extension .malbolge -> malbolge; sin rol detectable; archivo en raíz -> misc; external validator projectmap-detector: demonstrated malbolge for truth.malbolge sha256:7062713e96da... details:['extension', 'confidence']",
+      "sha256": "7062713e96dae33f5672fc4dcd654d5657e3c0ab44fd03bd93ebdd3ec43feb82"
+    }
+  ],
+  "rejected_false_positives": 1,
+  "total_files_scanned": 3,
+  "unique_owners": 0,
+  "unique_repositories": 0,
+  "verified_files": 2
+}

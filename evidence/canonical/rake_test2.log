@@ -1,0 +1,48 @@
+cp lib/linguist/samples_data.rb tmp/x86_64-linux-musl/stage/lib/linguist/samples_data.rb
+install -c tmp/x86_64-linux-musl/linguist/3.4.10/linguist.so lib/linguist/linguist.so
+cp tmp/x86_64-linux-musl/linguist/3.4.10/linguist.so tmp/x86_64-linux-musl/stage/lib/linguist/linguist.so
+Run options: --seed 13975
+
+# Running:
+
+.................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................F...........................................................................F................................E......F..............................
+
+Finished in 27.387365s, 74.3409 runs/s, 1437.4877 assertions/s.
+
+  1) Failure:
+TestGrammars#test_readme_file_is_in_sync [test/test_grammars.rb:42]:
+Grammar list is out-of-date. Run `script/list-grammars`.
+--- expected
++++ actual
+@@ -382,6 +382,7 @@
+ - **Macaulay2:** [Macaulay2/language-macaulay2](https://github.com/Macaulay2/language-macaulay2)
+ - **Makefile:** [textmate/make.tmbundle](https://github.com/textmate/make.tmbundle)
+ - **Mako:** [marconi/mako-tmbundle](https://github.com/marconi/mako-tmbundle)
++- **Malbolge:** [DannyBaanks/malbolge-syntax](https://github.com/DannyBaanks/malbolge-syntax)
+ - **Markdown:** [wooorm/markdown-tm-language](https://github.com/wooorm/markdown-tm-language)
+ - **Marko:** [marko-js/marko-tmbundle](https://github.com/marko-js/marko-tmbundle)
+ - **Mask:** [tenbits/sublime-mask](https://github.com/tenbits/sublime-mask)
+
+
+  2) Failure:
+TestLanguage#test_codemirror_mime_declared_in_mode_file [test/test_language.rb:463]:
+/workspace/patched/vendor/CodeMirror/mode/clike/clike.js does not exist
+
+  3) Error:
+TestLanguage#test_codemirror_mode_and_mime_defined_by_meta_mapping:
+Errno::ENOENT: No such file or directory @ rb_sysopen - /workspace/patched/vendor/CodeMirror/mode/meta.js
+    test/test_language.rb:452:in 'IO.read'
+    test/test_language.rb:452:in 'TestLanguage#test_codemirror_mode_and_mime_defined_by_meta_mapping'
+
+  4) Failure:
+TestLanguage#test_valid_codemirror_mode [test/test_language.rb:446]:
+clike isn't a valid CodeMirror mode
+
+2036 runs, 39369 assertions, 3 failures, 1 errors, 0 skips
+rake aborted!
+Command failed with status (1)
+/bundle/ruby/3.4.0/gems/rake-13.4.2/exe/rake:27:in '<top (required)>'
+/usr/local/bin/bundle:25:in 'Kernel#load'
+/usr/local/bin/bundle:25:in '<main>'
+Tasks: TOP => test
+(See full trace by running task with --trace)

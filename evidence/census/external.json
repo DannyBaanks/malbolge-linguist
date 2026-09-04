@@ -1,0 +1,32 @@
+{
+  "schema": "projectmap.external-language-evidence/1",
+  "records": [
+    {
+      "path": "truth.mal",
+      "language": "malbolge",
+      "verdict": "demonstrated",
+      "source": "malbolge-validator",
+      "tool": "gost+oracle",
+      "sha256": "7062713e96dae33f5672fc4dcd654d5657e3c0ab44fd03bd93ebdd3ec43feb82",
+      "details": {"execution": true, "validators": ["gost", "oracle"], "steps": {"0->0": "136 steps halt", "1->1": "loop"}}
+    },
+    {
+      "path": "truth.malbolge",
+      "language": "malbolge",
+      "verdict": "demonstrated",
+      "source": "extension",
+      "tool": "projectmap-detector",
+      "sha256": "7062713e96dae33f5672fc4dcd654d5657e3c0ab44fd03bd93ebdd3ec43feb82",
+      "details": {"extension": ".malbolge", "confidence": "verified"}
+    },
+    {
+      "path": "arith.mal",
+      "language": "malbolge",
+      "verdict": "rejected",
+      "source": "malbolge-validator",
+      "tool": "gost",
+      "sha256": "77ec57ff16747f9cbc9fd925f5b78e746760e7f2af944dbede0fec601b775d9d",
+      "details": {"reason": "Scheme, not Malbolge", "validator": "gost fails, not Malbolge syntax"}
+    }
+  ]
+}

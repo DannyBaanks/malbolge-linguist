@@ -1,0 +1,31 @@
+ruby 3.4.10 (2026-06-30 revision 2b0b7728dc) +PRISM [x86_64-linux-musl]
+Bundler version 2.6.9
+Client:
+ Version:           29.5.3
+ API version:       1.47 (downgraded from 1.54)
+ Go version:        go1.26.3
+ Git commit:        d1c06ef6b41d88d76866aea43c246cd7c63d04fa
+ Built:             Sun Jun  7 14:14:36 2026
+ OS/Arch:           linux/amd64
+ Context:           default
+
+Server: Docker Engine - Community
+ Engine:
+  Version:          27.5.1
+  API version:      1.47 (minimum version 1.24)
+  Go version:       go1.22.11
+  Git commit:       4c9b3b0
+  Built:            Wed Jan 22 13:41:24 2025
+  OS/Arch:          linux/amd64
+  Experimental:     false
+ containerd:
+  Version:          v1.7.25
+  GitCommit:        bcc810d6b9066471b0b6fa75f557a15a1cbf31bb
+ runc:
+  Version:          1.2.4
+  GitCommit:        v1.2.4-0-g6c52b3f
+ docker-init:
+  Version:          0.19.0
+  GitCommit:        de40ad0
+git version 2.54.0
+This is not GNU sed version 4.0

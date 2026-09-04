@@ -1,0 +1,138 @@
+From 1af6aef9a93085cd878f16bbde19513d72055060 Mon Sep 17 00:00:00 2001
+From: Danny Baanks <danny@example.invalid>
+Date: Wed, 2 Sep 2026 12:47:23 +0000
+Subject: [PATCH] Add Malbolge language and grammar
+
+- Register DannyBaanks/malbolge-syntax grammar submodule via script/add-grammar
+- Add Malbolge to grammars.yml (source.malbolge)
+- Add Malbolge entry to lib/linguist/languages.yml
+- Add samples/Malbolge/truth_machine.malbolge sample
+- Regenerate vendor/README.md via script/list-grammars
+---
+ .gitmodules                                   |  3 ++
+ grammars.yml                                  |  2 ++
+ lib/linguist/languages.yml                    |  8 +++++
+ samples/Malbolge/truth_machine.malbolge       |  1 +
+ vendor/README.md                              |  1 +
+ vendor/grammars/malbolge-syntax               |  1 +
+ .../git_submodule/malbolge-syntax.dep.yml     | 33 +++++++++++++++++++
+ 7 files changed, 49 insertions(+)
+ create mode 100644 samples/Malbolge/truth_machine.malbolge
+ create mode 160000 vendor/grammars/malbolge-syntax
+ create mode 100644 vendor/licenses/git_submodule/malbolge-syntax.dep.yml
+
+diff --git a/.gitmodules b/.gitmodules
+index 5d130a6d..4d8ec89b 100644
+--- a/.gitmodules
++++ b/.gitmodules
+@@ -977,6 +977,9 @@
+ [submodule "vendor/grammars/mako-tmbundle"]
+ 	path = vendor/grammars/mako-tmbundle
+ 	url = https://github.com/marconi/mako-tmbundle
++[submodule "vendor/grammars/malbolge-syntax"]
++	path = vendor/grammars/malbolge-syntax
++	url = https://github.com/DannyBaanks/malbolge-syntax.git
+ [submodule "vendor/grammars/markdown-tm-language"]
+ 	path = vendor/grammars/markdown-tm-language
+ 	url = https://github.com/wooorm/markdown-tm-language.git
+diff --git a/grammars.yml b/grammars.yml
+index 3400fcec..6fbe2060 100644
+--- a/grammars.yml
++++ b/grammars.yml
+@@ -928,6 +928,8 @@ vendor/grammars/make.tmbundle:
+ - source.makefile
+ vendor/grammars/mako-tmbundle:
+ - text.html.mako
++vendor/grammars/malbolge-syntax:
++- source.malbolge
+ vendor/grammars/markdown-tm-language:
+ - source.mdx
+ - text.md
+diff --git a/lib/linguist/languages.yml b/lib/linguist/languages.yml
+index 5b18d2c9..0b632f23 100644
+--- a/lib/linguist/languages.yml
++++ b/lib/linguist/languages.yml
+@@ -4732,6 +4732,14 @@ Mako:
+   tm_scope: text.html.mako
+   ace_mode: text
+   language_id: 221
++Malbolge:
++  type: programming
++  color: "#1D1A2F"
++  extensions:
++  - ".malbolge"
++  tm_scope: source.malbolge
++  ace_mode: text
++  language_id: 1006177966
+ Markdown:
+   type: prose
+   color: "#083fa1"
+diff --git a/samples/Malbolge/truth_machine.malbolge b/samples/Malbolge/truth_machine.malbolge
+new file mode 100644
+index 00000000..990fd0f8
+--- /dev/null
++++ b/samples/Malbolge/truth_machine.malbolge
+@@ -0,0 +1 @@
++(aONMLKJIHGFEDCBA@?>=<;:98765FD21dd!-,O*)y'&v5#"!DC|Qzf,*vutsrqpF!Clk|ihgfed9(T&6KoOHZYXWVUTSRQPONM]KJIHGFEDCBA@?>=<;:9876"'~g|edybav_zyxwvotsrqpSnPlOjibKfedcba`_XA??ZYRW:UTSLQ3ONMLK.IHGFE>CBA@?"=<;:38765432s0/.n,+*)j!&%f{"!~}|_zyxZvYnsrqpRnmlkjML:f_^GF!
+\ No newline at end of file
+diff --git a/vendor/README.md b/vendor/README.md
+index 139756ac..24ddd5f9 100644
+--- a/vendor/README.md
++++ b/vendor/README.md
+@@ -390,6 +390,7 @@ This is a list of grammars that Linguist selects to provide syntax highlighting
+ - **Macaulay2:** [Macaulay2/language-macaulay2](https://github.com/Macaulay2/language-macaulay2)
+ - **Makefile:** [textmate/make.tmbundle](https://github.com/textmate/make.tmbundle)
+ - **Mako:** [marconi/mako-tmbundle](https://github.com/marconi/mako-tmbundle)
++- **Malbolge:** [DannyBaanks/malbolge-syntax](https://github.com/DannyBaanks/malbolge-syntax)
+ - **Markdown:** [wooorm/markdown-tm-language](https://github.com/wooorm/markdown-tm-language)
+ - **Marko:** [marko-js/marko-tmbundle](https://github.com/marko-js/marko-tmbundle)
+ - **Mask:** [tenbits/sublime-mask](https://github.com/tenbits/sublime-mask)
+diff --git a/vendor/grammars/malbolge-syntax b/vendor/grammars/malbolge-syntax
+new file mode 160000
+index 00000000..225f5acb
+--- /dev/null
++++ b/vendor/grammars/malbolge-syntax
+@@ -0,0 +1 @@
++Subproject commit 225f5acbb846dbc7d23b5c497f4487dfefb161ac
+diff --git a/vendor/licenses/git_submodule/malbolge-syntax.dep.yml b/vendor/licenses/git_submodule/malbolge-syntax.dep.yml
+new file mode 100644
+index 00000000..ac582b8f
+--- /dev/null
++++ b/vendor/licenses/git_submodule/malbolge-syntax.dep.yml
+@@ -0,0 +1,33 @@
++---
++name: malbolge-syntax
++version: 225f5acbb846dbc7d23b5c497f4487dfefb161ac
++type: git_submodule
++homepage: https://github.com/DannyBaanks/malbolge-syntax.git
++license: mit
++licenses:
++- sources: LICENSE
++  text: |
++    MIT License
++
++    Copyright (c) 2026 Danny
++
++    Permission is hereby granted, free of charge, to any person obtaining a copy
++    of this software and associated documentation files (the "Software"), to deal
++    in the Software without restriction, including without limitation the rights
++    to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
++    copies of the Software, and to permit persons to whom the Software is
++    furnished to do so, subject to the following conditions:
++
++    The above copyright notice and this permission notice shall be included in all
++    copies or substantial portions of the Software.
++
++    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
++    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
++    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
++    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
++    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
++    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
++    SOFTWARE.
++- sources: README.md
++  text: MIT — see `LICENSE`.
++notices: []
+-- 
+2.54.0
+

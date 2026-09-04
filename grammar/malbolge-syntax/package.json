@@ -1,0 +1,25 @@
+{
+  "name": "malbolge-syntax",
+  "displayName": "Malbolge",
+  "description": "TextMate grammar for Malbolge (source.malbolge) — conservative, position-aware-safe",
+  "version": "0.1.0",
+  "publisher": "DannyBaanks",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DannyBaanks/malbolge-syntax"
+  },
+  "engines": {
+    "vscode": "*"
+  },
+  "contributes": {
+    "grammars": [
+      {
+        "language": "malbolge",
+        "scopeName": "source.malbolge",
+        "path": "./syntaxes/Malbolge.tmLanguage.json"
+      }
+    ]
+  },
+  "keywords": ["malbolge", "esolang", "textmate", "grammar"]
+}

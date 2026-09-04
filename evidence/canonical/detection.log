@@ -1,0 +1,17 @@
+=== FILEBLOB ===
+language=Malbolge
+extname=.malbolge
+mime=text/plain
+size=254
+=== LANGUAGE ===
+name=Malbolge
+extensions=[".malbolge"]
+tm_scope=source.malbolge
+color=#1D1A2F
+language_id=1006177966
+ace_mode=text
+=== BREAKDOWN ===
+breakdown_language=Malbolge
+extensions=[".malbolge"]
+type=programming
+EXIT_ALL=0
